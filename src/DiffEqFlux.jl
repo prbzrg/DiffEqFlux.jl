@@ -6,7 +6,8 @@ using Adapt, Base.Iterators, ChainRulesCore, ConsoleProgressMonitor,
     Printf, ProgressLogging, Random, RecursiveArrayTools, Reexport,
     SciMLBase, TerminalLoggers, Zygote, ZygoteRules
 
-@reexport using Flux
+using PackageExtensionCompat
+
 @reexport using SciMLSensitivity
 
 gpu_or_cpu(x) = Array
@@ -51,5 +52,9 @@ export LogisticKernel, SigmoidKernel, SilvermanKernel
 export collocate_data
 
 export multiple_shoot
+
+function __init__()
+    @require_extensions
+end
 
 end

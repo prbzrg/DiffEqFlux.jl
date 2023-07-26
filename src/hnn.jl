@@ -48,7 +48,6 @@ function HamiltonianNN(model::LuxCore.AbstractExplicitLayer; p=nothing)
     return HamiltonianNN{typeof(model),Nothing,Nothing}(model, nothing, nothing)
 end
 
-Flux.trainable(hnn::HamiltonianNN) = (hnn.p,)
 
 function _hamiltonian_forward(re, p, x)
     H = only(Zygote.gradient(x -> sum(re(p)(x)), x))

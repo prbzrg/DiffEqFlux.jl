@@ -1,5 +1,4 @@
 abstract type CNFLayer <: LuxCore.AbstractExplicitContainerLayer{(:model,)} end
-Flux.trainable(m::CNFLayer) = (m.p,)
 
 rng = Random.default_rng()
 

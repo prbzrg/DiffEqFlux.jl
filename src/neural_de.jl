@@ -545,7 +545,7 @@ References:
 [1] Dupont, Emilien, Arnaud Doucet, and Yee Whye Teh. "Augmented neural ODEs." In Proceedings of the 33rd International Conference on Neural Information Processing Systems, pp. 3140-3150. 2019.
 
 """
-abstract type AugmentedNDEType <: LuxCore.AbstractExplicitContainerLayer{(:nde,)} end 
+abstract type AugmentedNDEType <: LuxCore.AbstractExplicitContainerLayer{(:nde,)} end
 struct AugmentedNDELayer{DE<:Union{NeuralDELayer,NeuralSDELayer}} <: AugmentedNDEType
     nde::DE
     adim::Int

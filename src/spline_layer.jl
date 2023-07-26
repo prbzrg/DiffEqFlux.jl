@@ -1,5 +1,4 @@
 abstract type AbstractSplineLayer <: Function end
-Flux.trainable(m::AbstractSplineLayer) = (m.p,)
 
 """
 Constructs a Spline Layer. At a high-level, it performs the following:

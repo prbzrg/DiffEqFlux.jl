@@ -11,13 +11,13 @@ DataInterpolations = "82cc6244-b520-54b8-b5a6-8a565e85f1d0"
 DiffEqBase = "2b5f629d-d688-5b77-993f-72d75c75574e"
 Distributions = "31c24e10-a181-5473-b8eb-7969acd0382f"
 DistributionsAD = "ced4e74d-a319-5a8a-b0ac-84af2272839c"
-Flux = "587475ba-b771-5e3f-ad9e-33799f191a9c"
 ForwardDiff = "f6369f11-7733-5829-9624-2563aa707210"
 Functors = "d9f16b24-f501-4c13-a1f2-28368ffc5196"
 LinearAlgebra = "37e2e46d-f89d-539d-b4ee-838fcccc9c8e"
 Logging = "56ddb016-857b-54e1-b83d-db4d58db5568"
 LoggingExtras = "e6f89c97-d47a-5376-807f-9c37f3926c36"
 LuxCore = "bb33d45b-7691-41d6-9220-0943567d0623"
+PackageExtensionCompat = "65ce6f38-6b18-4e1d-a461-8949797d7930"
 Printf = "de0858da-6303-5e67-8744-51eddeeeb8d7"
 ProgressLogging = "33c8b6b6-d38a-422a-b730-caa89a2f386c"
 Random = "9a3f8284-a2c9-5f02-9a11-845980a1fd5c"
@@ -29,6 +29,13 @@ TerminalLoggers = "5d786b92-1e48-4d6f-9151-6b4477ca9bed"
 Zygote = "e88e6eb3-aa80-5325-afca-941959d7151f"
 ZygoteRules = "700de1a5-db45-46bc-99cf-38207098b444"
 
+[weakdeps]
+Flux = "587475ba-b771-5e3f-ad9e-33799f191a9c"
+Lux = "b2108857-7c20-44ae-9111-449ecde12c47"
+
+[extensions]
+FluxExt = ["Flux", "Lux"]
+
 [compat]
 Adapt = "3"
 ChainRulesCore = "1"
@@ -37,7 +44,6 @@ DataInterpolations = "3.3, 4"
 DiffEqBase = "6.41"
 Distributions = "0.23, 0.24, 0.25"
 DistributionsAD = "0.6"
-Flux = "0.12, 0.13, 0.14"
 ForwardDiff = "0.10"
 Functors = "0.4"
 LoggingExtras = "0.4, 1"
